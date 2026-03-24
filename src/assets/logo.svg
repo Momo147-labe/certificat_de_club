@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer Blue/White rings -->
+  <circle cx="100" cy="100" r="95" fill="#fff" stroke="#0A3BBE" stroke-width="4"/>
+  <circle cx="100" cy="100" r="85" fill="#fff" stroke="#0A3BBE" stroke-width="2"/>
+  
+  <!-- "CENTRE DE FORMATION LE LEADER" Curved Text Path -->
+  <path id="curveUp" d="M 20 100 A 80 80 0 0 1 180 100" fill="transparent"/>
+  <path id="curveDown" d="M 180 100 A 80 80 0 0 1 20 100" fill="transparent"/>
+  
+  <text font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#0A3BBE" letter-spacing="1">
+    <textPath href="#curveUp" startOffset="50%" text-anchor="middle">CENTRE DE FORMATION</textPath>
+  </text>
+  <text font-family="Arial, sans-serif" font-weight="bold" font-size="22" fill="#0A3BBE" letter-spacing="2">
+    <textPath href="#curveDown" startOffset="50%" text-anchor="middle">LE LEADER</textPath>
+  </text>
+  
+  <!-- Green Laurel Branches -->
+  <path d="M40 130 Q30 90 50 60" fill="none" stroke="#4CAF50" stroke-width="4" stroke-linecap="round"/>
+  <path d="M160 130 Q170 90 150 60" fill="none" stroke="#4CAF50" stroke-width="4" stroke-linecap="round"/>
+  
+  <circle cx="45" cy="80" r="5" fill="#4CAF50"/> <circle cx="55" cy="65" r="5" fill="#4CAF50"/>
+  <circle cx="155" cy="80" r="5" fill="#4CAF50"/> <circle cx="145" cy="65" r="5" fill="#4CAF50"/>
+  
+  <!-- Center Flag Element (Red/Blue/White style) -->
+  <circle cx="100" cy="100" r="35" fill="#e0e0e0"/>
+  <path d="M65 100 A35 35 0 0 1 135 100 Z" fill="#D32F2F"/>
+  <path d="M65 100 A35 35 0 0 0 135 100 Z" fill="#1976D2"/>
+</svg>

@@ -1,0 +1,205 @@
+.container {
+    padding: 20px;
+    background: var(--cjp-gray-bg, #f5f6fa);
+    min-height: 100vh;
+    overflow-x: auto;
+    display: block;
+}
+
+.certificateWrapper {
+    width: 100%;
+}
+
+.certificateFrame {
+    position: relative;
+    width: 1123px;
+    min-width: 1123px;
+    height: 794px;
+    min-height: 794px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    flex-shrink: 0;
+    border-top: 25px solid #800020;
+    /* Burgundy */
+    border-bottom: 25px solid #800020;
+}
+
+/* Side decorative tiny borders */
+.sideBorderLeft,
+.sideBorderRight {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #800020;
+    z-index: 1;
+}
+
+.sideBorderLeft {
+    left: 30px;
+}
+
+.sideBorderRight {
+    right: 30px;
+}
+
+/* Subtle top and bottom inner lines */
+.innerTopLine {
+    position: absolute;
+    top: 15px;
+    left: 45px;
+    right: 45px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.innerBottomLine {
+    position: absolute;
+    bottom: 15px;
+    left: 45px;
+    right: 45px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+/* Uploaded Logo */
+.topLogo {
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    z-index: 10;
+}
+
+/* Content Layout */
+.content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.institution {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #800020;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.mainTitle {
+    font-family: 'Georgia', serif;
+    font-size: 65px;
+    color: #222;
+    margin: 0;
+    letter-spacing: 8px;
+    font-weight: normal;
+}
+
+.subTitle {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    color: #666;
+    margin: 15px 0 40px 0;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+.presentedTo {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.recipientName {
+    font-family: 'Times New Roman', serif;
+    font-size: 55px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.nameUnderline {
+    width: 600px;
+    height: 2px;
+    background-color: #eee;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    color: #4A4A4A;
+    line-height: 1.8;
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: auto;
+    /* Pushes footer down */
+}
+
+/* 6. Footer Layout */
+.footer {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.footerBlock {
+    width: 250px;
+    text-align: center;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #800020;
+    margin-bottom: 10px;
+}
+
+.footerLabel {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.footerValue {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    color: #222;
+}
+
+.badgeBadge {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+}
+
+.badgeSVG {
+    width: 100%;
+    height: 100%;
+}

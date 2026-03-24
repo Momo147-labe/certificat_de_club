@@ -1,0 +1,249 @@
+.container {
+  padding: 40px 20px;
+  background: var(--cjp-gray-bg, #f5f6fa);
+  min-height: 100vh;
+  overflow-x: auto;
+  display: block;
+}
+
+.certificateWrapper {
+  width: 100%;
+}
+
+.certificateFrame {
+  position: relative;
+  width: 1123px;
+  min-width: 1123px;
+  height: 794px;
+  min-height: 794px;
+  margin: 0 auto;
+  background: white;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  font-family: 'Arial', sans-serif;
+
+  /* Responsive scaling removed for pixel-perfect stability */
+  flex-shrink: 0;
+}
+
+/* Borders */
+.blueBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 18px solid #0A3BBE;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.goldBorder {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  border: 4px solid #FFC107;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Corner Triangles */
+.cornerBox {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  z-index: 15;
+  /* On top of borders for exact match */
+}
+
+.cornerBox svg {
+  width: 100%;
+  height: 100%;
+}
+
+.topLeft {
+  top: 0;
+  left: 0;
+}
+
+.bottomRight {
+  bottom: 0;
+  right: 0;
+}
+
+/* Logos */
+.logoSide {
+  position: absolute;
+  top: 60px;
+  width: 120px;
+  height: 120px;
+  z-index: 20;
+}
+
+.leftLogo {
+  left: 50px;
+}
+
+.rightLogo {
+  right: 50px;
+}
+
+.logoSide img {
+  width: 100%;
+  height: 100%;
+  /* Optional: filter to make logo match strictly white bg */
+}
+
+/* Watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: url('../assets/logo.svg') center/contain no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Main Content Layer */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 80px;
+  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.institution {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 32px;
+  color: #0A3BBE;
+  letter-spacing: -0.5px;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.mainTitleBox {
+  /* No horizontal lines in Image 3 for title box */
+  margin-top: 5px;
+}
+
+.certTitle {
+  font-family: 'Georgia', serif;
+  font-size: 65px;
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.certSubtitle {
+  font-family: 'Arial', sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Body */
+.bodyContent {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.introText {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Pill Container for Name */
+.nameContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: #f2f2f2;
+  border: 4px solid #FFC107;
+  border-radius: 60px;
+  /* Pill shape */
+  padding: 10px 60px;
+  margin: 10px 0 25px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nameText {
+  font-family: 'Impact', 'Algerian', 'Brush Script MT', cursive;
+  /* Using a heavy/distinctive fallback */
+  font-size: 42px;
+  color: #111;
+  letter-spacing: 1px;
+}
+
+.details {
+  font-size: 20px;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  left: 0;
+  padding: 0 110px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.locationBlock {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 25px;
+  /* Alignment fix */
+}
+
+.signatureBlock {
+  text-align: center;
+  margin-right: 120px;
+  /* Pousse le texte vers la gauche pour éviter le grand triangle */
+}
+
+.signatureTitle {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000;
+}
+
+.signatureDecoration {
+  width: 100%;
+  height: 3px;
+  background: #000;
+  /* Replaced gold line with simple black line as per image 3. Wait, is it a line? Yes, black line */
+  margin: 5px 0 20px 0;
+}
+
+.signatureName {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}

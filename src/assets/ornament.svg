@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Vintage Corner Ornament Design -->
+  <path d="M5,5 L95,5 L95,15 L25,15 L25,95 L5,95 Z" fill="#FFD700"/>
+  <path d="M20,20 Q 50,20 50,50 Q 50,20 80,20 Q 50,20 50,-10 Q 50,20 20,20 Z" fill="#FFD700"/>
+  <circle cx="35" cy="35" r="8" fill="#ccac00"/>
+  <circle cx="60" cy="20" r="5" fill="#ccac00"/>
+  <circle cx="20" cy="60" r="5" fill="#ccac00"/>
+</svg>

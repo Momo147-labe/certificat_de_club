@@ -1,0 +1,240 @@
+.container {
+  padding: 20px;
+  background: var(--cjp-gray-bg, #f5f6fa);
+  min-height: 100vh;
+  overflow-x: auto;
+  display: block;
+}
+
+.certificateWrapper {
+  width: 100%;
+}
+
+.certificateCard {
+  position: relative;
+  width: 1123px;
+  min-width: 1123px;
+  height: 794px;
+  min-height: 794px;
+  margin: 0 auto;
+  /* Concentric circles repeating background */
+  background: repeating-radial-gradient(circle at 50% 50%,
+      #ffffff,
+      #ffffff 8px,
+      #f2f2f2 9px,
+      #e8e8e8 10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  font-family: 'Times New Roman', serif;
+  overflow: hidden;
+
+  /* Responsive scaling removed for pixel-perfect stability */
+  flex-shrink: 0;
+}
+
+/* Wavy Frame */
+.wavyFrame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Green Pearls */
+.pearl {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  z-index: 20;
+}
+
+.pearlLeft {
+  top: 150px;
+  left: 5px;
+}
+
+.pearlRightBottom {
+  bottom: 80px;
+  right: 5px;
+}
+
+/* Badges */
+.topBadge {
+  position: absolute;
+  top: 70px;
+  width: 120px;
+  height: 160px;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgePositionLeft {
+  left: 90px;
+}
+
+.badgePositionRight {
+  right: 90px;
+}
+
+.badgeMedal {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #FFDF70, #D4AF37, #997A00);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  /* serrated edge using clip path */
+  clip-path: polygon(50% 0%, 55% 5%, 62% 2%, 65% 9%, 73% 7%, 75% 14%, 83% 13%, 84% 21%, 91% 22%, 91% 30%, 97% 33%, 95% 40%, 100% 45%, 97% 52%, 100% 59%, 95% 63%, 97% 71%, 91% 73%, 91% 81%, 84% 81%, 82% 89%, 74% 87%, 71% 95%, 64% 92%, 59% 99%, 52% 95%, 46% 100%, 42% 94%, 34% 97%, 30% 90%, 22% 91%, 19% 83%, 12% 82%, 10% 74%, 3% 72%, 4% 64%, 0% 58%, 3% 51%, 0% 43%, 4% 38%, 3% 30%, 10% 27%, 12% 19%, 20% 18%, 23% 11%, 31% 12%, 35% 5%, 43% 8%);
+}
+
+.badgeMedalInner {
+  width: 70px;
+  height: 70px;
+  background: #111;
+  /* Dark center */
+  border-radius: 50%;
+  border: 2px solid #FFDF70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badgeMedalInner span {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Ribbons for the badge */
+.badgeRibbonLeft,
+.badgeRibbonRight {
+  position: absolute;
+  bottom: 10px;
+  width: 30px;
+  height: 60px;
+  background: linear-gradient(to bottom, #D4AF37, #997A00);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%);
+  z-index: 1;
+}
+
+.badgeRibbonLeft {
+  left: 20px;
+  transform: rotate(25deg);
+}
+
+.badgeRibbonRight {
+  right: 20px;
+  transform: rotate(-25deg);
+}
+
+/* Content Layout */
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 65px;
+  letter-spacing: 10px;
+  margin: 0;
+  color: #111;
+  text-align: center;
+}
+
+.institution {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px 0;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 26px;
+  letter-spacing: 5px;
+  font-weight: 400;
+  color: #444;
+  margin: 0 0 30px 0;
+}
+
+.presentationText {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.recipientName {
+  font-family: 'Brush Script MT', 'Great Vibes', cursive;
+  font-size: 80px;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+  width: 500px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #D4AF37, transparent);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+  max-width: 600px;
+  font-style: italic;
+}
+
+/* Footer (Signature & Date) */
+.footer {
+  position: absolute;
+  bottom: 80px;
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signBlock {
+  width: 200px;
+  text-align: center;
+}
+
+.signLine {
+  width: 100%;
+  border-bottom: 3px solid #D4AF37;
+  margin-bottom: 10px;
+}
+
+.signLabel {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  letter-spacing: 2px;
+}

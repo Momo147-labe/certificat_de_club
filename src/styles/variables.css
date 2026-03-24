@@ -1,0 +1,23 @@
+:root {
+    /* Global Backgrounds / Brands (from App.css) */
+    --cjp-white: #ffffff;
+    --cjp-gray-bg: #f5f6fa;
+    --cjp-orange: #f2901c;
+
+    /* Certificate Theming Colors */
+    --cert-gold: #d4af37;
+    --cert-gold-bright: #FFD700;
+    --cert-gold-light: #ffe066;
+    --cert-gold-dark: #ccac00;
+
+    --cert-bordeaux: #800020;
+
+    --cert-blue-dark: #002060;
+    --cert-blue-light: #3344cc;
+
+    --cert-text-dark: #1a1a1a;
+    --cert-text-grey: #666666;
+
+    /* Shared scales (fallback) */
+    --cert-scale: min(1, calc(100vw / 950));
+}

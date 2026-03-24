@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@400;600;700&display=swap');
+@import './styles/variables.css';
+
+body {
+  background-color: var(--cjp-gray-bg);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  /* Removed flex centering to allow normal vertical scrolling without clipping */
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.grid_template {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 20px;
+}
+
+.grid_gauche {
+  background-color: #2c3e50;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.grid_droite {
+  background-color: rgb(59, 50, 50);
+  height: 100vh;
+}
+
+.inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  background: var(--cjp-white);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.inputs-grid input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inputs-grid input:focus {
+  border-color: var(--cjp-orange);
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  perspective: 1000px;
+}
+
+/* Card Base Styles */
+.card-container {
+  width: var(--card-width);
+  height: var(--card-height);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: var(--cjp-white);
+  position: relative;
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Recto styles moved to Recto.module.css */
+
+/* Verso styles have been moved to Verso.module.css */
