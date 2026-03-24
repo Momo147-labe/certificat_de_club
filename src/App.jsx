@@ -14,19 +14,19 @@ import data from './data';
 
 const App = () => {
   const [model, setModel] = useState('classic');
-  const [mainTitle, setMainTitle] = useState('CERTIFICAT');
-  const [subTitle, setSubTitle] = useState("D'ACCOMPLISSEMENT");
-  const [institution, setInstitution] = useState('INSTITUTION LEADER');
-  const [presentationText, setPresentationText] = useState('Ce certificat est fièrement décerné à');
+  const [mainTitle, setMainTitle] = useState('ATTESTATION DE RECONNAISSANCE');
+  const [subTitle, setSubTitle] = useState("");
+  const [institution, setInstitution] = useState('UNIVERSITÉ DE LABÉ\nCONSEIL DES ÉTUDIANTS (CEUIL)');
+  const [presentationText, setPresentationText] = useState('Le Conseil des Étudiants de l’Université de Labé (CEUIL) atteste par la présente que :');
   const [introText, setIntroText] = useState('Ce Certificat de Participation Est Fièrement Présenté à');
   const [bannerText, setBannerText] = useState('Félicitations');
   const [sealText, setSealText] = useState('Sceau\nOfficiel\nValidé');
   const [badgeText, setBadgeText] = useState('Meilleur\nPrix\n2021');
-  const [dateLabel, setDateLabel] = useState('Fait le');
+  const [dateLabel, setDateLabel] = useState('Fait à Labé, le');
   const [date, setDate] = useState('23 Mars 2026');
-  const [signatureLabel, setSignatureLabel] = useState('Signature');
-  const [directorName, setDirectorName] = useState('Directeur Général');
-  const [description, setDescription] = useState('Pour avoir démontré des compétences exceptionnelles et avoir complété la formation avec succès et dévouement.');
+  const [signatureLabel, setSignatureLabel] = useState('Signature\nLe Président');
+  const [directorName, setDirectorName] = useState('[Nom du signataire]');
+  const [description, setDescription] = useState('a été membre actif de ladite structure et a contribué de manière significative à son développement.\n\nEn reconnaissance de son engagement, de son dévouement et de ses services rendus, la présente attestation lui est décernée.');
   const [logoImage, setLogoImage] = useState(null);
 
   const cvPreviewRef = useRef(null);

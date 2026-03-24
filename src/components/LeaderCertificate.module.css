@@ -77,9 +77,9 @@
 /* Logos */
 .logoSide {
   position: absolute;
-  top: 60px;
-  width: 120px;
-  height: 120px;
+  top: 40px;
+  width: 90px;
+  height: 90px;
   z-index: 20;
 }
 
@@ -136,6 +136,7 @@
   letter-spacing: -0.5px;
   margin: 0 0 10px 0;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  white-space: pre-line;
 }
 
 .mainTitleBox {
@@ -145,7 +146,7 @@
 
 .certTitle {
   font-family: 'Georgia', serif;
-  font-size: 65px;
+  font-size: 48px;
   font-weight: 900;
   color: #000;
   margin: 0;
@@ -171,6 +172,10 @@
   font-size: 20px;
   color: #222;
   margin-bottom: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
 }
 
 /* Pill Container for Name */
@@ -196,9 +201,13 @@
 }
 
 .details {
-  font-size: 20px;
+  font-size: 18px;
   color: #222;
-  line-height: 1.6;
+  line-height: 1.4;
+  white-space: pre-line;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Footer */
@@ -232,6 +241,7 @@
   font-size: 26px;
   font-weight: bold;
   color: #000;
+  white-space: pre-line;
 }
 
 .signatureDecoration {

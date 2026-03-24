@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './LeaderCertificate.module.css';
-import logoFallback from '../assets/logo.svg';
+import logoFallback from '../assets/logo.jpeg';
 
 const LeaderCertificate = ({
   name = "Nom & Prénom",
