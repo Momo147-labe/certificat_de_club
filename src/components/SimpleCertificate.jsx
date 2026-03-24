@@ -24,7 +24,8 @@ const SimpleCertificate = ({
     subTitle = "D'ACHÈVEMENT",
     presentationText = "Attribué à",
     dateLabel = "Date de Délivrance",
-    signatureLabel = "Directeur Général"
+    signatureLabel = "Directeur Général",
+    department = ""
 }) => {
     const currentLogo = logoImage || logoFallback;
 
@@ -48,6 +49,7 @@ const SimpleCertificate = ({
                         <div className={styles.presentedTo}>{presentationText}</div>
 
                         <div className={styles.recipientName}>{name}</div>
+                        <div className={styles.department}>{department}</div>
                         <div className={styles.nameUnderline}></div>
 
                         <div className={styles.description}>{description}</div>

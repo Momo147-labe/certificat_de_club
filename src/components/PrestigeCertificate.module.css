@@ -165,9 +165,18 @@
     font-family: 'Brush Script MT', 'Great Vibes', cursive;
     font-size: 85px;
     color: #FFFFFF;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
     /* Subtle gold glow */
+}
+
+.department {
+    font-size: 22px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .nameUnderline {

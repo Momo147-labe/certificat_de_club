@@ -1,193 +1,228 @@
 .container {
     padding: 20px;
-    background: var(--cjp-gray-bg, #f5f6fa);
+    background: #f1f5f9;
     min-height: 100vh;
-    overflow-x: auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .certificateWrapper {
-    width: 100%;
+    width: 1123px;
 }
 
 .certificateFrame {
     position: relative;
     width: 1123px;
-    min-width: 1123px;
     height: 794px;
-    min-height: 794px;
-    margin: 0 auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     box-sizing: border-box;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     overflow: hidden;
-    flex-shrink: 0;
-    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-family: 'Inter', 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
 }
 
-/* 1. Abstract Background Shapes */
-.shapeTopLeft {
+/* 1. Specialized Backgrounds */
+.meshBackground {
     position: absolute;
-    top: -50px;
-    left: -50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(5, 150, 105, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(5, 150, 105, 0.08) 0px, transparent 50%);
+    z-index: 0;
+}
+
+.geometricAccent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, transparent 50%, rgba(16, 185, 129, 0.03) 50%);
+    z-index: 0;
+}
+
+.glowSpot {
+    position: absolute;
+    top: -100px;
+    left: -100px;
     width: 400px;
     height: 400px;
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    border-radius: 50%;
-    opacity: 0.1;
-    z-index: 1;
-    pointer-events: none;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    filter: blur(40px);
 }
 
-.shapeBottomRight {
-    position: absolute;
-    bottom: -100px;
-    right: -50px;
-    width: 600px;
-    height: 600px;
-    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    opacity: 0.15;
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* 2. Abstract Vertical Bar */
 .verticalAccent {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 25px;
-    background: #10b981;
-    z-index: 5;
-}
-
-/* 3. Uploaded Logo position */
-.topLogo {
-    position: absolute;
-    top: 60px;
-    left: 80px;
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
+    width: 12px;
+    background: linear-gradient(to bottom, #059669, #10b981);
     z-index: 10;
 }
 
-/* 4. Content Layout */
+/* 2. Content Layout */
 .content {
     position: relative;
-    width: 100%;
+    z-index: 20;
+    padding: 60px 80px 60px 80px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding-left: 200px;
-    padding-top: 100px;
-    z-index: 5;
     box-sizing: border-box;
 }
 
-/* 5. Typography */
-.institution {
-    font-size: 18px;
-    color: #64748b;
-    letter-spacing: 4px;
+/* 3. Institution Header */
+.institutionHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.inlineLogo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
+}
+
+.institutionName {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+    text-align: center;
+    flex: 1;
+    line-height: 1.5;
+}
+
+/* 4. Title Section */
+.titleSection {
     margin-bottom: 30px;
-    font-weight: 600;
-    white-space: pre-line;
 }
 
 .mainTitle {
-    font-size: 50px;
+    font-size: 48px;
+    font-weight: 900;
     color: #0f172a;
     margin: 0;
-    letter-spacing: -1px;
-    font-weight: 800;
-    line-height: 1.1;
-}
-
-.subTitle {
-    font-size: 28px;
-    color: #10b981;
-    margin: 5px 0 40px 0;
-    font-weight: 600;
-    letter-spacing: 2px;
+    letter-spacing: -1.5px;
     text-transform: uppercase;
 }
 
-.presentedTo {
-    font-size: 16px;
-    color: #475569;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+.titleUnderline {
+    width: 120px;
+    height: 6px;
+    background: #10b981;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+/* 5. Presentation & Recipient */
+.presentationText {
+    font-size: 18px;
+    color: #64748b;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.recipientBlock {
+    margin-bottom: 35px;
 }
 
 .recipientName {
-    font-size: 60px;
+    font-size: 56px;
+    font-weight: 800;
     color: #0f172a;
-    margin-bottom: 10px;
-    font-weight: 700;
     letter-spacing: -1px;
-    border-bottom: 4px solid #10b981;
-    padding-bottom: 5px;
-    display: inline-block;
 }
 
-.description {
-    font-size: 16px;
-    color: #475569;
-    line-height: 1.5;
-    max-width: 650px;
-    margin-top: 20px;
-    font-weight: 400;
-    margin-bottom: auto;
-    /* Pushes footer down */
-    white-space: pre-line;
-}
-
-/* 6. Footer Layout */
-.footer {
-    width: 800px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 60px;
-}
-
-.footerBlock {
-    width: 250px;
-}
-
-.footerLabel {
-    font-size: 12px;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
+.civilite {
+    color: #10b981;
     font-weight: 600;
 }
 
-.footerValue {
+.department {
     font-size: 20px;
-    color: #334155;
-    font-weight: 700;
-    border-top: 2px solid #cbd5e1;
-    padding-top: 10px;
-    white-space: pre-line;
+    color: #059669;
+    font-weight: 600;
+    margin-top: 5px;
+    letter-spacing: 1px;
 }
 
-/* 7. Minimalist Stamp */
+/* 6. Body Text */
+.bodyText {
+    font-size: 18px;
+    color: #334155;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 0;
+}
+
+.bodyText p {
+    margin-bottom: 15px;
+}
+
+/* 7. Footer */
+.footer {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 30;
+}
+
+.footerBlock {
+    min-width: 280px;
+}
+
+.footerLabel {
+    font-size: 13px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.footerValue {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.signatureLine {
+    height: 2px;
+    background: #cbd5e1;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* 8. Badge */
 .badgeBadge {
     position: absolute;
-    top: 80px;
-    right: 100px;
-    width: 120px;
-    height: 120px;
-    z-index: 10;
+    top: 60px;
+    right: 60px;
+    width: 110px;
+    height: 110px;
+    z-index: 30;
+    filter: drop-shadow(0 10px 15px rgba(16, 185, 129, 0.2));
 }
 
 .badgeSVG {

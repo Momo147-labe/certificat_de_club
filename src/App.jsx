@@ -16,17 +16,17 @@ const App = () => {
   const [model, setModel] = useState('classic');
   const [mainTitle, setMainTitle] = useState('ATTESTATION DE RECONNAISSANCE');
   const [subTitle, setSubTitle] = useState("");
-  const [institution, setInstitution] = useState('UNIVERSITÉ DE LABÉ\nCONSEIL DES ÉTUDIANTS (CEUIL)');
-  const [presentationText, setPresentationText] = useState('Le Conseil des Étudiants de l’Université de Labé (CEUIL) atteste par la présente que :');
+  const [institution, setInstitution] = useState('ASSOCIATION DES JEUNES ETUDIANTS RESSORTISSANTS ET AMIS DE DINGUIRAYE POUR LE DEVELOPPEMENT (AJERADD)');
+  const [presentationText, setPresentationText] = useState('');
   const [introText, setIntroText] = useState('Ce Certificat de Participation Est Fièrement Présenté à');
   const [bannerText, setBannerText] = useState('Félicitations');
   const [sealText, setSealText] = useState('Sceau\nOfficiel\nValidé');
   const [badgeText, setBadgeText] = useState('Meilleur\nPrix\n2021');
   const [dateLabel, setDateLabel] = useState('Fait à Labé, le');
   const [date, setDate] = useState('23 Mars 2026');
-  const [signatureLabel, setSignatureLabel] = useState('Signature\nLe Président');
-  const [directorName, setDirectorName] = useState('[Nom du signataire]');
-  const [description, setDescription] = useState('a été membre actif de ladite structure et a contribué de manière significative à son développement.\n\nEn reconnaissance de son engagement, de son dévouement et de ses services rendus, la présente attestation lui est décernée.');
+  const [signatureLabel, setSignatureLabel] = useState('');
+  const [directorName, setDirectorName] = useState('Youssouf Sow');
+  const [description, setDescription] = useState('a été membre actif de ladite structure et a contribué de manière significative à son développement.\nEn reconnaissance de son engagement, de son dévouement et de ses services rendus, la présente attestation lui est décernée.');
   const [logoImage, setLogoImage] = useState(null);
 
   const cvPreviewRef = useRef(null);
@@ -42,14 +42,16 @@ const App = () => {
     }
   };
 
-  const handleModelChange = (modelType, studentName) => {
+  const handleModelChange = (modelType, studentName, department, gender) => {
     const props = {
       name: studentName,
+      department: department,
+      civilite: gender === "M" ? "M." : gender === "Mme" ? "Mme" : "",
       date: date,
       directorName: directorName,
       description: description,
       logoImage: logoImage,
-      institution: institution, // Added institution explicitly as per instruction
+      institution: institution,
       mainTitle: mainTitle,
       subTitle: subTitle,
       presentationText: presentationText,
@@ -261,7 +263,7 @@ const App = () => {
 
       {/* Aperçu visible : une seule carte (le template) */}
       <div className='grid_droite'>
-        {data.length > 0 && handleModelChange(model, data[0])}
+        {data.length > 0 && handleModelChange(model, data[0].name, data[0].department, data[0].gender)}
       </div>
 
       {/* Conteneur caché : génère toutes les cartes pour le PDF */}
@@ -269,7 +271,7 @@ const App = () => {
         <div ref={cvPreviewRef}>
           {data.map((item, index) => (
             <div key={index}>
-              {handleModelChange(model, item)}
+              {handleModelChange(model, item.name, item.department, item.gender)}
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ClassicCertificate.module.css';
+import logoFallback from '../assets/logo.jpeg';
 
 // SVG Assets
 const CornerOrnament = ({ className }) => (
@@ -48,8 +49,10 @@ const ClassicCertificate = ({
   bannerText = "Félicitations",
   sealText = "Sceau\nOfficiel\nValidé",
   dateLabel = "",
-  signatureLabel = "Signature"
+  signatureLabel = "Signature",
+  department = ""
 }) => {
+  const currentLogo = logoImage || logoFallback;
   return (
     <div className={styles.container}>
       <div className={styles.certificateWrapper}>
@@ -65,16 +68,17 @@ const ClassicCertificate = ({
           <CornerOrnament className={`${styles.corner} ${styles.bottomLeft}`} />
           <CornerOrnament className={`${styles.corner} ${styles.bottomRight}`} />
 
+          {/* Watermark Logo */}
+          <div className={styles.watermark} style={{ backgroundImage: `url(${currentLogo})` }}></div>
+
           {/* Top Center Ornament or Uploaded Logo */}
-          {logoImage ? (
-            <img
-              src={logoImage}
-              alt="Logo"
-              style={{ position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)', width: '80px', height: '80px', objectFit: 'contain', zIndex: 100 }}
-            />
-          ) : (
-            <TopOrnament />
-          )}
+          <div style={{ position: 'absolute', top: '20px', left: '50%', transform: 'translateX(-50%)', zIndex: 100 }}>
+            {currentLogo ? (
+              ""
+            ) : (
+              <TopOrnament />
+            )}
+          </div>
 
           {/* Left Ribbon & Seal */}
           <div className={styles.sealArea}>
@@ -100,6 +104,7 @@ const ClassicCertificate = ({
 
             <div className={styles.nameSection}>
               <div className={styles.recipientName}>{name}</div>
+              <div className={styles.department}>{department}</div>
               <div className={styles.nameUnderline}></div>
             </div>
 

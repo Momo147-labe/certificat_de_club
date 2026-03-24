@@ -27,6 +27,22 @@
   flex-shrink: 0;
 }
 
+/* Watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* 1. Borders (Thick outer, thin inner) */
 .outerBorder {
   position: absolute;
@@ -227,6 +243,14 @@
   font-size: 58px;
   color: #111;
   margin-bottom: -5px;
+}
+
+.department {
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 5px;
+  font-family: 'Georgia', serif;
 }
 
 .nameUnderline {

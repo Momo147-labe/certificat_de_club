@@ -24,7 +24,8 @@ const ElegantCertificate = ({
     subTitle = "D'HONNEUR",
     presentationText = "Ce certificat honore",
     dateLabel = "Fait le",
-    signatureLabel = "Le Directeur"
+    signatureLabel = "Le Directeur",
+    department = ""
 }) => {
     const currentLogo = logoImage || logoFallback;
 
@@ -49,6 +50,7 @@ const ElegantCertificate = ({
                         <div className={styles.presentedTo}>{presentationText}</div>
 
                         <div className={styles.recipientName}>{name}</div>
+                        <div className={styles.department}>{department}</div>
                         <div className={styles.nameUnderline}></div>
 
                         <div className={styles.description}>{description}</div>

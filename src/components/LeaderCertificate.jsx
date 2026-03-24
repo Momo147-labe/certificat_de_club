@@ -1,6 +1,6 @@
-import React from 'react';
 import styles from './LeaderCertificate.module.css';
 import logoFallback from '../assets/logo.jpeg';
+const logo = "/images.png";
 
 const LeaderCertificate = ({
   name = "Nom & Prénom",
@@ -11,9 +11,9 @@ const LeaderCertificate = ({
   institution = "INSTITUTION LEADER",
   mainTitle = "CERTIFICAT",
   presentationText = "PRÉSENTÉ POUR RÉUSSITE EXCEPTIONNELLE À",
-  introText = "Ce Certificat de Participation Est Fièrement Présenté à",
   dateLabel = "Fait le",
-  signatureLabel = "Directeur Général"
+  signatureLabel = "Directeur Général",
+  department = ""
 }) => {
   const currentLogo = logoImage || logoFallback;
   return (
@@ -25,26 +25,33 @@ const LeaderCertificate = ({
           <div className={styles.blueBorder}></div>
           <div className={styles.goldBorder}></div>
 
-          {/* Corner Triangles SVG */}
+          {/* Refined Corner Ornaments */}
           <div className={`${styles.cornerBox} ${styles.topLeft}`}>
             <svg viewBox="0 0 200 200" preserveAspectRatio="none">
-              <polygon points="0,0 200,0 0,200" fill="#0A3BBE" />
-              <polygon points="200,0 200,30 30,200 0,200 0,170 170,0" fill="#FFC107" />
+              <defs>
+                <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#1E40AF" />
+                  <stop offset="100%" stopColor="#0A2472" />
+                </linearGradient>
+              </defs>
+              <polygon points="0,0 200,0 0,200" fill="url(#blueGrad)" />
+              <polygon points="200,0 200,40 40,200 0,200 0,160 160,0" fill="#FFC107" />
+              <circle cx="35" cy="35" r="12" fill="#FFFFFF" opacity="0.4" />
             </svg>
           </div>
 
           <div className={`${styles.cornerBox} ${styles.bottomRight}`}>
             <svg viewBox="0 0 200 200" preserveAspectRatio="none">
-              {/* Pointing down-right */}
-              <polygon points="200,200 0,200 200,0" fill="#0A3BBE" />
-              <polygon points="0,200 0,170 170,0 200,0 200,30 30,200" fill="#FFC107" />
+              <polygon points="200,200 0,200 200,0" fill="url(#blueGrad)" />
+              <polygon points="0,200 0,160 160,0 200,0 200,40 40,200" fill="#FFC107" />
+              <circle cx="165" cy="165" r="12" fill="#FFFFFF" opacity="0.4" />
             </svg>
           </div>
 
           {/* Logos latéraux */}
-          <div className={`${styles.logoSide} ${styles.leftLogo}`}>
+          {/* <div className={`${styles.logoSide} ${styles.leftLogo}`}>
             <img src={currentLogo} alt="Logo" />
-          </div>
+          </div> */}
           <div className={`${styles.logoSide} ${styles.rightLogo}`}>
             <img src={currentLogo} alt="Logo" />
           </div>
@@ -63,11 +70,12 @@ const LeaderCertificate = ({
             </header>
 
             <main className={styles.bodyContent}>
-              <p className={styles.introText}>{introText}</p>
+
 
               {/* Pill Container */}
               <div className={styles.nameContainer}>
                 <div className={styles.nameText}>{name}</div>
+                <div className={styles.departmentName}>{department}</div>
               </div>
 
               <div className={styles.details}>

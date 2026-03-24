@@ -71,7 +71,8 @@ const Certificate = ({
   presentationText = "Ce certificat est fièrement présenté à",
   badgeText = "Meilleur\nPrix\n2021",
   dateLabel = "DATE",
-  signatureLabel = "SIGNATURE"
+  signatureLabel = "SIGNATURE",
+  department = ""
 }) => {
   return (
     <div className={styles.container}>
@@ -107,6 +108,7 @@ const Certificate = ({
               {presentationText}
             </p>
             <div className={styles.recipientName}>{name}</div>
+            <div className={styles.department}>{department}</div>
 
             <div className={styles.divider}></div>
 

@@ -34,7 +34,8 @@ const PrestigeCertificate = ({
     subTitle = "D'EXCELLENCE",
     presentationText = "Ce certificat est fièrement décerné à",
     dateLabel = "Date de délivrance",
-    signatureLabel = "Signature Autorisée"
+    signatureLabel = "Signature Autorisée",
+    department = ""
 }) => {
     const currentLogo = logoImage || logoFallback;
 
@@ -68,6 +69,7 @@ const PrestigeCertificate = ({
                         <p className={styles.presentedTo}>{presentationText}</p>
 
                         <div className={styles.recipientName}>{name}</div>
+                        <div className={styles.department}>{department}</div>
                         <div className={styles.nameUnderline}></div>
 
                         <p className={styles.description}>{description}</p>

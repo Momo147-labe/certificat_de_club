@@ -116,26 +116,28 @@
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 5;
+  z-index: 20;
+  /* Above corner ornaments (z-index: 15) */
   display: flex;
   flex-direction: column;
-  padding: 60px 80px;
+  padding: 50px 80px;
   box-sizing: border-box;
 }
 
 /* Header */
 .header {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0;
 }
 
 .institution {
-  font-family: 'Arial Black', Impact, sans-serif;
-  font-size: 32px;
-  color: #0A3BBE;
-  letter-spacing: -0.5px;
+  font-family: 'Times New Roman', serif;
+  font-size: 28px;
+  color: #1E40AF;
+  letter-spacing: 2px;
   margin: 0 0 10px 0;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
   white-space: pre-line;
 }
 
@@ -148,9 +150,10 @@
   font-family: 'Georgia', serif;
   font-size: 48px;
   font-weight: 900;
-  color: #000;
+  color: #111;
   margin: 0;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .certSubtitle {
@@ -164,8 +167,10 @@
 
 /* Body */
 .bodyContent {
-  text-align: center;
-  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .introText {
@@ -178,34 +183,48 @@
   white-space: pre-line;
 }
 
-/* Pill Container for Name */
+/* Refined Container for Name and Department */
 .nameContainer {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f2f2f2;
-  border: 4px solid #FFC107;
-  border-radius: 60px;
-  /* Pill shape */
-  padding: 10px 60px;
-  margin: 10px 0 25px 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  border: 4px double #FFC107;
+  border-radius: 50px;
+  padding: 15px 80px;
+  margin: 15px auto 20px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: fit-content;
 }
 
 .nameText {
-  font-family: 'Impact', 'Algerian', 'Brush Script MT', cursive;
-  /* Using a heavy/distinctive fallback */
-  font-size: 42px;
+  font-family: 'Georgia', serif;
+  font-size: 48px;
+  font-weight: 700;
   color: #111;
   letter-spacing: 1px;
+  font-style: italic;
+}
+
+.departmentName {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #1E40AF;
+  font-weight: 600;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-top: 1px solid #FFC107;
+  padding-top: 5px;
 }
 
 .details {
-  font-size: 18px;
+  font-size: 16px;
   color: #222;
   line-height: 1.4;
   white-space: pre-line;
-  max-width: 750px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -213,43 +232,45 @@
 /* Footer */
 .footer {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   width: 100%;
   left: 0;
-  padding: 0 110px;
+  padding: 0 80px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  z-index: 30;
 }
 
 .locationBlock {
-  font-size: 22px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 25px;
-  /* Alignment fix */
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
 }
 
 .signatureBlock {
   text-align: center;
-  margin-right: 120px;
-  /* Pousse le texte vers la gauche pour éviter le grand triangle */
+  min-width: 300px;
+  position: relative;
+  z-index: 35;
 }
 
 .signatureTitle {
-  font-size: 26px;
-  font-weight: bold;
-  color: #000;
-  white-space: pre-line;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .signatureDecoration {
   width: 100%;
-  height: 3px;
-  background: #000;
-  /* Replaced gold line with simple black line as per image 3. Wait, is it a line? Yes, black line */
-  margin: 5px 0 20px 0;
+  height: 2px;
+  background: #111;
+  margin: 10px 0;
 }
 
 .signatureName {
